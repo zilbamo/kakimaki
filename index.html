@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mines Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="balance-info">
+            <div class="balance-item">
+                <span>ВАШ БАЛАНС</span>
+                <span class="balance-amount" id="balance">100 000 ₽</span>
+            </div>
+            <div class="balance-item">
+                <span>ВЫИГРЫШ</span>
+                <span class="balance-amount" id="winAmount">0 ₽</span>
+            </div>
+        </div>
+
+        <div class="mines-grid" id="minesGrid">
+            <!-- Grid will be populated by JavaScript -->
+        </div>
+
+        <div class="controls">
+            <div class="mines-controls">
+                <div class="mines-input">
+                    <span>Количество мин:</span>
+                    <input type="number" class="mines-count-input" id="minesCount" value="10" min="1" max="15">
+                </div>
+                <div class="mines-buttons" id="minesButtons">
+                    <button class="mine-count-btn" data-mines="3">3</button>
+                    <button class="mine-count-btn" data-mines="5">5</button>
+                    <button class="mine-count-btn active" data-mines="10">10</button>
+                    <button class="mine-count-btn" data-mines="15">15</button>
+                </div>
+            </div>
+
+            <div class="bet-controls">
+                <input type="number" class="bet-input" id="betAmount" value="1000" min="100" max="1000000" step="100">
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn-play" id="playButton">ИГРАТЬ</button>
+                <button class="btn-collect" id="collectButton">ЗАБРАТЬ</button>
+                <button class="btn-real-play" id="realPlayButton">ИГРАТЬ С БОНУСОМ</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
